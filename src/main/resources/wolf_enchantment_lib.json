@@ -1,0 +1,20 @@
+{
+  "required": true,
+  "package": "com.mcmostwolf.enchantmentlib.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "wolf_enchantment_lib.refmap.json",
+  "mixins": [
+    "EnchantmentReload",
+    "EnchantmentMaxLevel",
+    "EnchantmentIsCurse",
+    "EnchantmentIsTradeable",
+    "EnchantmentIsTreasure",
+    "EnchantmentCheckCompatibility"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.7"
+}
