@@ -97,11 +97,12 @@ repositories {
         }
     }
 }
-
+/*
 mixin {
     add sourceSets.main, "wolf_enchantment_lib.refmap.json"
     config 'wolf_enchantment_lib.json'
 }
+ */
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
@@ -139,7 +140,7 @@ tasks.named('jar', Jar).configure {
                 'Implementation-Version'  : project.jar.archiveVersion,
                 'Implementation-Vendor'   : mod_authors,
                 'Implementation-Timestamp': new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
-                "MixinConfigs" : "wolf_enchantment_lib.json"
+                //"MixinConfigs" : "wolf_enchantment_lib.json"
         ])
     }
 

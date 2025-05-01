@@ -40,7 +40,7 @@ public class EnchantmentMaxLevel {
         Enchantment enchantment = (Enchantment) (Object) this;
         String location = getLocation(enchantment);
         if (EnchantmentsConfig.isLoad(enchantment) >= 2) {
-            cir.setReturnValue(EnchantmentsConfig.getMaxLevel(location));
+            cir.setReturnValue(EnchantmentsConfig.getMaxLevel(enchantment));
         }
     }
 }

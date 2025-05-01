@@ -1,5 +1,6 @@
 package com.mcmostwolf.enchantmentlib;
 
+import com.mcmostwolf.enchantmentlib.config.CommonConfig;
 import com.mcmostwolf.enchantmentlib.config.EnchantmentsConfig;
 import com.mcmostwolf.enchantmentlib.event.ClientEvent;
 import net.minecraft.client.Minecraft;
@@ -32,6 +33,8 @@ public class WolfEnchantmentLibMain {
         Minecraft.getInstance().options.keyMappings = ArrayUtils.add(Minecraft.getInstance().options.keyMappings, OPEN_GUI.get());
     }
     private void onCommonSetup(FMLCommonSetupEvent event){
-        ForgeRegistries.ENCHANTMENTS.getValues().forEach(EnchantmentsConfig::loadConfig);
+        if (CommonConfig.LOAD_ALL_CONFIGS.get()) {
+            ForgeRegistries.ENCHANTMENTS.getValues().forEach(EnchantmentsConfig::loadConfig);
+        }
     }
 }

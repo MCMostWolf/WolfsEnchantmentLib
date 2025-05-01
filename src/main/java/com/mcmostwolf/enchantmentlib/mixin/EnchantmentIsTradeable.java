@@ -20,7 +20,7 @@ public class EnchantmentIsTradeable {
         Enchantment enchantment = (Enchantment) (Object) this;
         String location = getLocation(enchantment);
         if (EnchantmentsConfig.isLoad(enchantment) >= 2) {
-            cir.setReturnValue(EnchantmentsConfig.couldTrade(location));
+            cir.setReturnValue(EnchantmentsConfig.couldTrade(enchantment));
         }
     }
 }

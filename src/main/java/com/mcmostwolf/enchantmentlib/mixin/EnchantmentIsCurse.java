@@ -20,7 +20,7 @@ public class EnchantmentIsCurse {
         Enchantment enchantment = (Enchantment) (Object) this;
         String location = getLocation(enchantment);
         if (EnchantmentsConfig.isLoad(enchantment) >= 2) {
-            cir.setReturnValue(EnchantmentsConfig.isCurse(location));
+            cir.setReturnValue(EnchantmentsConfig.isCurse(enchantment));
         }
     }
 }

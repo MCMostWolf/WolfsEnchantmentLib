@@ -5,8 +5,6 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
 
-import static com.mcmostwolf.enchantmentlib.util.EnchantmentHelper.getLocation;
-
 public class BasicEnchantment extends Enchantment {
     private final boolean isTreasure;
     private final boolean isDiscoverable;
@@ -35,7 +33,7 @@ public class BasicEnchantment extends Enchantment {
             return isTreasure;
         }
         else {
-            return EnchantmentsConfig.isTreasure(getLocation(this));
+            return EnchantmentsConfig.isTreasure(this);
         }
     }
     @Override
@@ -44,7 +42,7 @@ public class BasicEnchantment extends Enchantment {
             return isDiscoverable;
         }
         else {
-            return EnchantmentsConfig.couldFound(getLocation(this));
+            return EnchantmentsConfig.couldFound(this);
         }
     }
     @Override
@@ -53,7 +51,7 @@ public class BasicEnchantment extends Enchantment {
             return isTradeable;
         }
         else {
-            return EnchantmentsConfig.couldTrade(getLocation(this));
+            return EnchantmentsConfig.couldTrade(this);
         }
     }
     @Override
@@ -62,7 +60,7 @@ public class BasicEnchantment extends Enchantment {
             return isCurse;
         }
         else {
-            return EnchantmentsConfig.isCurse(getLocation(this));
+            return EnchantmentsConfig.isCurse(this);
         }
     }
     @Override
@@ -71,7 +69,7 @@ public class BasicEnchantment extends Enchantment {
             return maxLevel;
         }
         else {
-            return EnchantmentsConfig.getMaxLevel(getLocation(this));
+            return EnchantmentsConfig.getMaxLevel(this);
         }
     }
 }

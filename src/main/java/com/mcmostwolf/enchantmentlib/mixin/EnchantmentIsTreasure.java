@@ -24,7 +24,7 @@ public class EnchantmentIsTreasure {
         Enchantment enchantment = (Enchantment) (Object) this;
         String location = getLocation(enchantment);
         if (EnchantmentsConfig.isLoad(enchantment) >= 2) {
-            cir.setReturnValue(EnchantmentsConfig.isTreasure(location));
+            cir.setReturnValue(EnchantmentsConfig.isTreasure(enchantment));
         }
     }
 }
